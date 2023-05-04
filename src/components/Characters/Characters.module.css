@@ -1,0 +1,45 @@
+.characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* justify-items: center; */
+  /* justify-content: center; */
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.character {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 16px;
+  transition: all ease-in-out 0.28s;
+}
+
+.character:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.characterIcon {
+  width: 100%;
+}
+
+.characterInfo {
+  padding: 10px;
+}
+
+.characterName {
+  text-align: center;
+  font-size: 22px;
+}
+
+.characterInfoItem {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.characterInfoItem span {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8;
+}

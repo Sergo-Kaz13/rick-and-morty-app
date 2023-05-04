@@ -1,0 +1,56 @@
+.paginateBlock {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.paginateLink {
+  border: 1px solid rgba(41, 173, 63, 0.5);
+  padding: 0 5px;
+  transition: all ease-in-out 0.28s;
+}
+
+.paginateLink:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+  background: rgba(41, 173, 63, 0.5);
+}
+
+.active {
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.active:hover {
+  cursor: default;
+  background: none;
+  border: none;
+}
+
+.nextBtn,
+.prevBtn {
+  padding: 3px 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid rgba(41, 173, 63, 0.5);
+  transition: all ease-in-out 0.28s;
+}
+
+.nextBtn:hover,
+.prevBtn:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+  background: rgba(41, 173, 63, 0.5);
+}
+
+.disabledBtn {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.disabledBtn:hover {
+  cursor: default;
+  background: none;
+  border: 1px solid rgba(41, 173, 63, 0.5);
+}

@@ -1,0 +1,36 @@
+.menu {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  justify-items: flex-end;
+  gap: 30px;
+  list-style: none;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  opacity: 0.8;
+  transition: all ease-in-out 0.28s;
+}
+
+a.active {
+  background: #ffffff;
+  background: radial-gradient(
+    ellipse farthest-corner at center center,
+    #ffffff 0%,
+    #3a6b3b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu a.active:hover {
+  cursor: default;
+  opacity: 1;
+}

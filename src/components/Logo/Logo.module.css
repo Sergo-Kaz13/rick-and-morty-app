@@ -1,0 +1,7 @@
+.logo {
+  font-size: 42px;
+  font-family: "Teko", sans-serif;
+  background: -webkit-linear-gradient(#beee12, #03801e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  border-top: 1px solid #fff;
+  margin-top: 30px;
+  transition: all ease-in-out 0.28s;
+}
+
+.footer a {
+  opacity: 0.8;
+}
