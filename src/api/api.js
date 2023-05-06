@@ -15,3 +15,9 @@ export const locationAPI = {
     return instance.get(`location?page=${currentPage}`);
   },
 };
+
+export const episodeAPI = {
+  getEpisodes(currentPage = 1) {
+    return instance.get(`episode?page=${currentPage}`);
+  },
+};

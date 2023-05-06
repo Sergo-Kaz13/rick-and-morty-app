@@ -3,7 +3,7 @@ import "./App.css";
 import Characters from "./components/Characters/Characters";
 import Location from "./components/Location/Location";
 import { Header } from "./components/Header/Header";
-import { Episode } from "./components/Episode/Episode";
+import Episodes from "./components/Episode/Episode";
 import { Footer } from "./components/Footer/Footer";
 import { Main } from "./components/Main/Main";
 
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Characters />} />
             <Route path="/location" element={<Location />} />
-            <Route path="/episode" element={<Episode />} />
+            <Route path="/episode" element={<Episodes />} />
           </Routes>
         </Main>
         <Footer />

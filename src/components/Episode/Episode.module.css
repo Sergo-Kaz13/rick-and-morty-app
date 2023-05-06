@@ -1,0 +1,44 @@
+.episode {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.episodeItem {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 16px;
+  transition: all ease-in-out 0.28s;
+}
+
+.episodeItem:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 0.6;
+}
+
+.episodeName {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 5px;
+  overflow: hidden;
+  font-size: 18px;
+  text-align: center;
+}
+
+.episodeInfo {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.episodeInfo span {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.5;
+  padding-left: 10px;
+}
