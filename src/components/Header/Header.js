@@ -12,6 +12,7 @@ export const Header = () => {
           <Logo />
           <Menu />
         </div>
+        <div className="search"></div>
       </Container>
     </header>
   );
