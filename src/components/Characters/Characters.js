@@ -4,6 +4,7 @@ import { getCharacters, setCurrentPage } from "../../redux/charactersReducer";
 import { Container } from "./../Container/Container";
 import style from "./Characters.module.css";
 import PaginatedItems from "../PaginatedItems/PaginatedItems";
+import { Link } from "react-router-dom";
 
 const Characters = (props) => {
   const { info, characters, currentPage, getCharacters, setCurrentPage } =
@@ -16,18 +17,13 @@ const Characters = (props) => {
   }, [getCharacters, currentPage]);
 
   const charactersItems = characters.map((character) => {
-    const {
-      id,
-      name,
-      gender,
-      image,
-      species,
-      status,
-      location: { name: locName },
-    } = character;
+    const { id, name, gender, image, status } = character;
+
+    const statusStyle =
+      status === "Alive" ? "alive" : status === "Dead" ? "dead" : "unknown";
 
     return (
-      <div key={id} className={style.character}>
+      <Link key={id} to={`/${id}`} className={style.character}>
         <div>
           <img className={style.characterIcon} src={image} alt={name} />
         </div>
@@ -35,20 +31,14 @@ const Characters = (props) => {
           <h2 className={style.characterName}>{name}</h2>
           <ul>
             <li className={style.characterInfoItem}>
-              Status: <span>{status}</span>
+              Status: <span className={style[statusStyle]}>{status}</span>
             </li>
             <li className={style.characterInfoItem}>
               Gender: <span>{gender}</span>
             </li>
-            <li className={style.characterInfoItem}>
-              Species: <span>{species}</span>
-            </li>
-            <li className={style.characterInfoItem}>
-              Location: <span>{locName}</span>
-            </li>
           </ul>
         </div>
-      </div>
+      </Link>
     );
   });
 
@@ -67,6 +57,7 @@ const Characters = (props) => {
 };
 const mapStateToProps = (state) => ({
   characters: state.charactersReducer.characters,
+  character: state.charactersReducer.character,
   info: state.charactersReducer.info,
   currentPage: state.charactersReducer.currentPage,
   pages: state.charactersReducer.pages,

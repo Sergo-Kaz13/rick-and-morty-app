@@ -1,0 +1,26 @@
+.locationName {
+  text-align: center;
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+.locationInfo {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.locationInfo span {
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+.residentsLocation {
+  display: grid;
+  grid-template: auto / repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.residentsLocation img {
+  width: 100%;
+}

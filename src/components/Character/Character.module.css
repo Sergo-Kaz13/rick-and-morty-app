@@ -1,0 +1,118 @@
+.characterBlockInfo {
+  display: flex;
+  gap: 30px;
+}
+
+.characterIcon {
+}
+
+.characterInfo {
+}
+
+.characterName {
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.characterInfo {
+  margin-bottom: 20px;
+}
+
+.characterInfo span,
+.characterInfo a {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.characterInfo a {
+  text-decoration: underline;
+  transition: all ease-in-out 0.28s;
+}
+
+.characterInfo a:hover {
+  cursor: pointer;
+}
+
+.episodesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.28s;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.episodesList.showEpisodes {
+  height: max-content;
+  opacity: 1;
+}
+
+.episodesList li {
+  transition: all ease-in-out 0.28s;
+}
+
+.episodesList li:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.alive::after,
+.dead::after,
+.unknown::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-3px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.alive::after {
+  background: green;
+}
+
+.dead::after {
+  background: red;
+}
+
+.unknown::after {
+  background: silver;
+}
+
+.btnShowEpisode {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnShowEpisode:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* .btnShowEpisode:hover .btnShowEpisodeArrow {
+  margin-left: 10px;
+} */
+
+.btnShowEpisodeArrow {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all ease-in-out 0.28s;
+}
+
+.showListActive {
+  transform: translateY(10px) rotate(90deg);
+  margin-left: 10px;
+}

@@ -1,6 +1,7 @@
 .menu {
   display: grid;
   grid-template: 1fr / 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
   justify-items: flex-end;
   gap: 30px;
   list-style: none;

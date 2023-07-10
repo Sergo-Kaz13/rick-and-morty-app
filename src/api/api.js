@@ -10,6 +10,12 @@ export const charactersAPI = {
   },
 };
 
+export const characterAPI = {
+  getCharacter(id) {
+    return instance.get(`character/${id}`);
+  },
+};
+
 export const locationAPI = {
   getLocations(currentPage = 1) {
     return instance.get(`location?page=${currentPage}`);
@@ -19,5 +25,23 @@ export const locationAPI = {
 export const episodeAPI = {
   getEpisodes(currentPage = 1) {
     return instance.get(`episode?page=${currentPage}`);
+  },
+};
+
+export const episodeSingleAPI = {
+  getEpisodeSingle(id) {
+    return instance.get(`episode/${id}`);
+  },
+};
+
+export const episodesCharacterAPI = {
+  getEpisodesCharacter(id = 1) {
+    return instance.get(`episode/[${id}]`);
+  },
+};
+
+export const locationSingleAPI = {
+  getLocationSingle(id) {
+    return instance.get(`location/${id}`);
   },
 };
