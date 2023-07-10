@@ -1,0 +1,34 @@
+.episodeInfo {
+  text-align: center;
+  font-size: 26px;
+}
+
+.episodeName {
+  text-decoration: underline;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.charactersBlockTitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.episodeCharacters {
+  display: grid;
+  grid-template: auto / repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.episodeCharacters a {
+  /* display: inline-block;
+  width: 150px; */
+}
+
+.episodeCharacters a:hover {
+}
+
+.episodeCharacters img {
+  width: 100%;
+}

@@ -8,7 +8,8 @@
 
 .headerBlock {
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
+  /* grid-template: 1fr / 1fr 1fr; */
+  grid-template: auto / repeat(auto-fill, minmax(100px, 1fr));
   align-items: center;
   min-height: 100px;
 }

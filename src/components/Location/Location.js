@@ -4,6 +4,7 @@ import { getLocations, setCurrentPage } from "../../redux/locationsReducer";
 import { connect } from "react-redux";
 import { Container } from "../Container/Container";
 import PaginatedItems from "../PaginatedItems/PaginatedItems";
+import { Link } from "react-router-dom";
 
 const Location = (props) => {
   const {
@@ -22,7 +23,7 @@ const Location = (props) => {
     results.map((location) => {
       const { id, name, type, residents, dimension } = location;
       return (
-        <div className={style.locationItem} key={id}>
+        <Link className={style.locationItem} key={id} to={`/location/${id}`}>
           <h2 className={style.locationName}>{name}</h2>
           <ul className={style.locationInfo}>
             <li>
@@ -35,7 +36,7 @@ const Location = (props) => {
               dimension: <span>{dimension}</span>
             </li>
           </ul>
-        </div>
+        </Link>
       );
     });
 

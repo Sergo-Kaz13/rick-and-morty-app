@@ -1,8 +1,7 @@
 .characters {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* justify-items: center; */
-  /* justify-content: center; */
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -39,7 +38,34 @@
 }
 
 .characterInfoItem span {
+  display: inline-block;
+  position: relative;
   font-size: 16px;
   font-weight: 400;
   opacity: 0.8;
+}
+
+.alive::after,
+.dead::after,
+.unknown::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-3px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.alive::after {
+  background: green;
+}
+
+.dead::after {
+  background: red;
+}
+
+.unknown::after {
+  background: silver;
 }

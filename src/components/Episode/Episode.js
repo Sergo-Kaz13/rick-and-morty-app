@@ -4,6 +4,7 @@ import { getEpisodes, setCurrentPage } from "../../redux/episodesReducer";
 import style from "./Episode.module.css";
 import { Container } from "../Container/Container";
 import PaginatedItems from "../PaginatedItems/PaginatedItems";
+import { Link } from "react-router-dom";
 
 const Episodes = (props) => {
   const {
@@ -22,7 +23,7 @@ const Episodes = (props) => {
     results.map((ep) => {
       const { id, name, air_date, episode, characters } = ep;
       return (
-        <div className={style.episodeItem} key={id}>
+        <Link className={style.episodeItem} key={id} to={`/episode/${id}`}>
           <h2 className={style.episodeName}>{name}</h2>
           <ul className={style.episodeInfo}>
             <li>
@@ -35,7 +36,7 @@ const Episodes = (props) => {
               date: <span>{air_date}</span>
             </li>
           </ul>
-        </div>
+        </Link>
       );
     });
 

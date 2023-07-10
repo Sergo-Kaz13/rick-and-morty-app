@@ -17,6 +17,7 @@ export const Menu = () => {
         <li>
           <NavLink
             to="/location"
+            end
             className={({ isActive }) => (isActive ? `${style.active}` : "")}
           >
             Location
@@ -25,6 +26,7 @@ export const Menu = () => {
         <li>
           <NavLink
             to="/episode"
+            end
             className={({ isActive }) => (isActive ? `${style.active}` : "")}
           >
             Episode

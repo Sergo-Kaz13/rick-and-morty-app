@@ -16,8 +16,8 @@ export const charactersReducer = (state = initialState, action) => {
     case GET_CHARACTERS:
       return {
         ...state,
-        characters: [...action.character.data.results],
-        info: { ...action.character.data.info },
+        characters: [...action.characters.data.results],
+        info: { ...action.characters.data.info },
       };
     case SET_CURRENT_PAGE:
       return {
@@ -34,10 +34,10 @@ export const charactersReducer = (state = initialState, action) => {
   }
 };
 
-export const setCharacters = (character) => {
+export const setCharacters = (characters) => {
   return {
     type: GET_CHARACTERS,
-    character,
+    characters: characters,
   };
 };
 export const setCurrentPage = (currentPage) => ({
